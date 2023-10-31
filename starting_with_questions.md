@@ -6,9 +6,12 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 
+![Screenshot 2023-10-31 135655](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/94c922a6-1e92-4fb1-bc18-7a063cd6b4e3)
 
 
-Answer:
+Answer: 
+
+
 
 
 
@@ -18,9 +21,14 @@ Answer:
 
 SQL Queries:
 
+```sql
+SELECT country, city, AVG(productQuantity) AS avg_product
+FROM all_sessions
+WHERE country NOT LIKE '(not set)' AND productQuantity IS NOT NULL
+GROUP BY country, city
+ORDER BY avg_product DESC
 
 
-Answer:
 
 
 
@@ -31,9 +39,7 @@ Answer:
 
 SQL Queries:
 
-
-
-Answer:
+Answer: 
 
 
 
