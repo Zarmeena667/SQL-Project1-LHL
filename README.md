@@ -1,7 +1,11 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
+
 ## Project/Goals
-(fill in your description and goals here)
+
+•	Getting comfortable with large, unclean data sets
+•	Moving ahead from prescriptive defined questions to exploring data and drawing conclusions
+
 
 ## Process
 ### (your step 1)
