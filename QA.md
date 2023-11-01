@@ -4,6 +4,47 @@ What are your risk areas? Identify and describe them.
 
 Queries used:
 
+
+IDENITIFYING PRIMARY KEYS
+Query 1. 
+```sql
+SELECT * 
+FROM all_sessions
+```
+This query retrieves a result set for about 15134 rows
+
+Query 2.
+
+``` sql
+   SELECT * 
+   FROM all_sessions 
+   WHERE fullvisitorid IS NULL
+```
+This query retrieves no result meaning there are no fullvisitorid values that are null.
+
+Query 3.
+
+```sql
+    SELECT distinct fullvisitorid
+    FROM all_sessions
+```
+This query retrieves a result set of 14223 values. 
+
+
+This test proves that there are duplicate values in the fullvisitorid column and therefore it cannot be the primary key to the sessions table. 
+
+I conducted a similar test for analytics table which also contains the fullvisitorid column. There were about 4301122 rows of which only 120018 had unique values and there were no nulls. Thereby I concluded that this column cannot serve the primary key for analytics table. 
+
+I didn’t add auto incrementing primary keys to the table as I didn’t feel the need and thought I’d be able to do that better if I have the business rule for database design. 
+
+I didn’t add auto incrementing primary keys to the table as I didn’t feel the need and thought I’d be able to do that better if I have the business rule for database design.
+
+A similar test was performed for products table, sales_by_sku and sales_report.
+
+
+
+
+
 NULL VALUES
 
 ```sql
