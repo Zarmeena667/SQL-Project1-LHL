@@ -4,14 +4,23 @@ Answer the following questions and provide the SQL queries used to find the answ
 **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 
-SQL Queries:
+SQL Queries: 
+```sql 
+SELECT
+       CASE WHEN city LIKE 'not available%' THEN country
+            WHEN city LIKE '(not set)' THEN country
+       Else city 
+       END as "City", country as "Country", (transactionrevenue/100000) as "TransactionRevenue" 
+FROM all_sessions
+WHERE transactionrevenue IS NOT NULL
+ORDER BY "TransactionRevenue" DESC
+```
 
 
 
 Answer: 
 
-
-
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/7f59621a-be81-45b7-9c5b-aa11b011ae4d)
 
 
 
@@ -138,9 +147,23 @@ Answer:
 
 SQL Queries:
 
-
+```sql
+SELECT
+    s. country, 
+    SUM(cast((a.units_sold) * (a.unit_price/100000) as float)) as revenue_impact
+FROM analytics a
+JOIN all_sessions s
+ON s.fullvisitorid = a.fullvisitorid
+WHERE units_sold IS NOT NULL
+GROUP BY country
+ORDER BY revenue_impact DESC
+limit 10
+```
 
 Answer:
+
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/2ba10e09-8a5d-4fe2-8d12-549aab4e47ce)
+
 
 
 
