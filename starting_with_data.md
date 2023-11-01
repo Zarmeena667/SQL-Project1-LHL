@@ -34,7 +34,8 @@ Answer:
 
 Question 3: Top three channel groupings that have highest amount of sold units?
 
-SQL Queries: ```sql
+SQL Queries: 
+```sql
 SELECT sum(units_sold) as "SumUnitsSold", channelgrouping as "ChannelGrouping"
 FROM analytics A
 WHERE units_sold IS NOT NULL
@@ -49,16 +50,3 @@ Answer:
 
 
 
-Question 4: 
-
-SQL Queries:
-
-Answer:
-
-
-
-Question 5: 
-
-SQL Queries:
-
-Answer:
