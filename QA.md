@@ -6,14 +6,14 @@ Queries used:
 
 
 IDENITIFYING PRIMARY KEYS
-Query 1. 
+Query 1 
 ```sql
 SELECT * 
 FROM all_sessions
 ```
 This query retrieves a result set for about 15134 rows
 
-Query 2.
+Query 2
 
 ``` sql
    SELECT * 
@@ -22,7 +22,7 @@ Query 2.
 ```
 This query retrieves no result meaning there are no fullvisitorid values that are null.
 
-Query 3.
+Query 3
 
 ```sql
     SELECT distinct fullvisitorid
