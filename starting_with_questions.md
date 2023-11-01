@@ -32,18 +32,24 @@ SQL Queries:
 
 ```sql
 ---#1: Average productQuantity by country and city------
-SELECT country, city, AVG(productQuantity) AS avg_product
+SELECT 
+     country as "Country", 
+     city as "City", 
+     AVG(productQuantity) AS "AvgProduct"
 FROM all_sessions
 WHERE country NOT LIKE '(not set)' AND productQuantity IS NOT NULL
 GROUP BY country, city
-ORDER BY avg_product DESC
+ORDER BY "AvgProduct" DESC;
+
 
 ---#2: Average productQuantity by country ------
-SELECT country, city, AVG(productQuantity) AS avg_product
+SELECT country as "Country", 
+       AVG(productQuantity) AS "AvgProduct"
 FROM all_sessions
-WHERE country NOT LIKE '(not set)' AND productQuantity IS NOT NULL
-GROUP BY country, city
-ORDER BY avg_product DESC
+WHERE country NOT LIKE '(not set)' 
+       AND productQuantity IS NOT NULL
+GROUP BY country
+ORDER BY "AvgProduct" DESC
 ```
 Answer: 
 
@@ -52,14 +58,16 @@ Answer:
 
 
 
-![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/16267d5a-8570-409c-a5b1-ec1fc9b9b899)
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/ce53aad0-605c-4819-87d9-97d083901532)
+
 
 
 
 -------------------# Result 2-------------------
 
 
-![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/ba8c1411-ca64-473f-a8d6-d9f4256f1b38)
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/c41571a2-0c6c-4e2f-9ec2-ac662f6af6e0)
+
 
 
 **Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
