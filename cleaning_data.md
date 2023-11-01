@@ -58,17 +58,7 @@ SELECT ProductSKU
 FROM all_sessions;
 ```
 
-5. Duplicate Values
-
-There were duplicate values found in analytics table for fullvisitorid
-
-```sql
-SELECT * 
-FROM sales_by_sku
-where productsku = 'GGOEYAXR066128'
-```
-
-6. Not set values that can be replaced
+5. Not set values that can be replaced
 
 Replacing city with country where city data is not available in the all_sessions table
 
