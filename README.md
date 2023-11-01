@@ -17,13 +17,13 @@ Steps followed:
 
 - Identifying datatype to be assigned
 - There must be a balance between allocating too much memory and too less e.g. name, page title etc.
-- A high number of missing values e.g. revenue, transaction revenue etc. Must take into account when drawing any conclusions/drawinf insights.
+- A high number of missing values e.g. revenue, transaction revenue etc. Must take into account when drawing any conclusions/drawing insights.
 - Identifying columns with inconsistent data format e.g. ProductSKU
 - Columns with missing data
 
 2. Data cleaning
 - Used upper camel case for table columns could be assigned when querying
-- Assessed which null values that can be replaced be existing values in another column e.g. country can replace city in the all_sessions table for missing cities depending on the nature of the analytics problem.
+- Assessed which null values that can be replaced be existing values in another column e.g. country can replace city in the all_sessions table for missing cities depending on the nature of the analytics problem.
 - Data cleaning is also defined by the business problem e.g. irrelevant data
 - Data cleaning is iterative, it doesn’t stop at step 1 and I often found myself cleaning required data instead of cleaning the entire provided dataset.
 - Creating clean tables from raw tables
@@ -35,8 +35,7 @@ Steps followed:
 
 4. Analysis
 
-- Tried to maximize the use of different queries and techniques we’ve learned during the duration of the course
-
+- Tried to maximize the use of different queries and techniques we’ve learned during the duration of the course
 
 
 ## Results
