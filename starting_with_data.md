@@ -1,6 +1,13 @@
-Question 1: 
+Question 1: The site received the highest number of page views on which date? 
 
 SQL Queries:
+```sql 
+SELECT DISTINCT (fullvisitorid), 
+       pageviews as "PageViews", 
+        to_date(date::text, 'YYYYMMDD') as "Date" from all_sessions 
+Order by "PageViews" DESC
+```
+
 
 Answer: 
 
