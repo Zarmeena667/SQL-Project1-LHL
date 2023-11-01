@@ -59,3 +59,4 @@ There were several queries run to identify trends and patterns which can be refe
 - Due to time constraint I couldn't explore using stored procedures and views.
 - I also wasn't able to showcase usage of user-defined functions for this project.
 - I would also want to explore the data further and introduce constraints such as default and unique in order to streamline the data that can be inserted into a database.
+- Need to focus on acquainting myself with Github. For the prepatory course I connected Github with AWS and wasn't able to use it for this assignment.
