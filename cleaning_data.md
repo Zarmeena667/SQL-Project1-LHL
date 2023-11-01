@@ -42,7 +42,7 @@ WHERE countries LIKE ‘(not set)’
 
 3. Column names
 
-The column names are not standardized to a single format. Camel case must be used to standardize column names. I prefer upper camel case when providing alias to table names. 
+The column names are not standardized to a single format. Camel case or snake case can be used to standardize column names. I preferred upper camel case when providing alias to table names but later found that it creates a lot of extra work and complications. 
 
 ```sql
 SELECT (type) as "Type", count(type) as "CountType"
@@ -60,7 +60,7 @@ FROM all_sessions;
 
 5. Duplicate Values
 
-There were duplicate values found in sales_by_sku table.
+There were duplicate values found in analytics table for fullvisitorid
 
 ```sql
 SELECT * 
