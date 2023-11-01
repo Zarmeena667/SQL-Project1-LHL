@@ -108,12 +108,28 @@ Answer:
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
-SQL Queries:
+SQL Queries: 
 
+```sql
+---------- #4 Top-selling product from each country---------
+SELECT * 
+FROM (
+SELECT
+distinct(s.v2productname),
+s.country, 
+sr.total_ordered, 
+(rank() over (partition by s.country order by sr.total_ordered desc)) as rank_orders
+FROM all_sessions s
+JOIN sales_report sr
+ON s.productsku = sr.productsku) x
+WHERE x.rank_orders = 1 and country != '(not set)'
+ORDER BY country ASC
+```
 
 
 Answer:
 
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/a048cb3c-95bb-4573-947e-9ce7676e4e4b)
 
 
 
