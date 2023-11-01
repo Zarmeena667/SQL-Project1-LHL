@@ -42,7 +42,7 @@ Steps followed:
 ## Results
 There were several queries run to identify trends and patterns which can be referred to in the project. However, I'd like to use this section to draw your attention to some interesting insights I found while working with data. 
 1. Revenue was not equal to units sold and unit price. There were no other columns that would help me determine how this such data was evaluated.
-2. What may potentially look like a primary key isn't necessarily one. For e.g. 
+2. What may potentially look like a primary key isn't necessarily one. For e.g. sku is not the primary key for the products table.
 
 
 ## Challenges 
