@@ -41,7 +41,18 @@ I didn’t add auto incrementing primary keys to the table as I didn’t feel th
 
 A similar test was performed for products table, sales_by_sku and sales_report.
 
+SKU from products table is not the primary key to the sales_by_sku table. 
 
+
+```sql
+select * from products
+where sku = 'GGOEYAXR066128';
+
+select productsku from sales_by_sku
+where productsku = 'GGOEGATB060613';
+```
+
+The products and sales_by_sku table don't seem to be related through a primary and foreign key.
 
 
 
