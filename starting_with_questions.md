@@ -157,20 +157,20 @@ SQL Queries:
 
 ```sql
 SELECT
-    s. country, 
-    SUM(cast((a.units_sold) * (a.unit_price/100000) as float)) as revenue_impact
+    s. country as "Country", 
+    SUM(cast((a.units_sold) * (a.unit_price/100000) as float)) as "RevenueImpact"
 FROM analytics a
 JOIN all_sessions s
 ON s.fullvisitorid = a.fullvisitorid
 WHERE units_sold IS NOT NULL
 GROUP BY country
-ORDER BY revenue_impact DESC
+ORDER BY "RevenueImpact" DESC
 limit 10
 ```
 
 Answer:
 
-![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/2ba10e09-8a5d-4fe2-8d12-549aab4e47ce)
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/68b5b23b-fc11-483b-b0cd-71fb84e146de)
 
 
 
