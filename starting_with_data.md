@@ -5,20 +5,31 @@ SQL Queries:
 SELECT DISTINCT (fullvisitorid), 
        pageviews as "PageViews", 
         to_date(date::text, 'YYYYMMDD') as "Date" from all_sessions 
-Order by "PageViews" DESC
+ORDER BY "PageViews" DESC
+LIMIT 1
 ```
 
 
 Answer: 
 
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/e76baf0c-001c-467b-b967-b424b48029a8)
 
 
-Question 2: 
+Question 2: What is the average of ordered quantity with lowest sentiment score?
 
-SQL Queries:
+SQL Queries: 
+
+```sql
+SELECT name AS "Name" , AVG(orderedquantity) as "Average", sentimentscore as "SentimentScore"
+FROM Products
+GROUP BY name, sentimentscore
+ORDER BY
+```
 
 Answer:
 
+
+![image](https://github.com/Zarmeena667/SQL-Project1-LHL/assets/145514413/2b136dbb-433a-4c65-8290-b6831e4e1f05)
 
 
 Question 3: 
